@@ -1,3 +1,3 @@
-export const updateChoice = () => {
-  console.log("update choice");
+export const updateChoice = (directory = ".") => {
+  console.log(`update choice directory ${directory}`);
 };

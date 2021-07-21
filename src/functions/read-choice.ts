@@ -1,3 +1,3 @@
-export const readChoice = () => {
-  console.log("read choice");
+export const readChoice = (directory = ".") => {
+  console.log(`read choice directory ${directory}`);
 };

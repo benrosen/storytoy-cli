@@ -1,3 +1,3 @@
-export const createChoice = () => {
-  console.log("create choice");
+export const createChoice = (directory = ".") => {
+  console.log(`create choice in ${directory}`);
 };

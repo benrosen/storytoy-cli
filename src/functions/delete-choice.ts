@@ -1,3 +1,3 @@
-export const deleteChoice = () => {
-  console.log("delete choice");
+export const deleteChoice = (directory = ".") => {
+  console.log(`delete choice directory ${directory}`);
 };
