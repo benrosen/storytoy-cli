@@ -1,27 +1,18 @@
 import { Command, flags } from "@oclif/command";
 
+import { configureDirectory } from "../functions/configure-directory";
+
 export default class Config extends Command {
   static description = "configure a directory for storytoy";
 
   static flags = {
     help: flags.help({ char: "h" }),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({ char: "n", description: "name to print" }),
-    // flag with no value (-f, --force)
-    force: flags.boolean({ char: "f" }),
   };
 
-  static args = [{ name: "file" }];
+  static args = [{ name: "directory" }];
 
   async run() {
-    const { args, flags } = this.parse(Config);
-
-    const name = flags.name ?? "world";
-    this.log(
-      `hello ${name} from /home/benjaminprosen/storytoy-cli/src/commands/config.ts`
-    );
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`);
-    }
+    const { args } = this.parse(Config);
+    return configureDirectory(args.directory);
   }
 }

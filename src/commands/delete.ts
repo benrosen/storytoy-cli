@@ -1,27 +1,18 @@
 import { Command, flags } from "@oclif/command";
 
+import { deleteChoice } from "../functions/delete-choice";
+
 export default class Delete extends Command {
   static description = "safely delete a choice";
 
   static flags = {
     help: flags.help({ char: "h" }),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({ char: "n", description: "name to print" }),
-    // flag with no value (-f, --force)
-    force: flags.boolean({ char: "f" }),
   };
 
-  static args = [{ name: "file" }];
+  static args = [{ name: "directory" }];
 
   async run() {
-    const { args, flags } = this.parse(Delete);
-
-    const name = flags.name ?? "world";
-    this.log(
-      `hello ${name} from /home/benjaminprosen/storytoy-cli/src/commands/delete.ts`
-    );
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`);
-    }
+    const { args } = this.parse(Delete);
+    return deleteChoice(args.directory);
   }
 }
