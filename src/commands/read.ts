@@ -1,6 +1,6 @@
 import { Command, flags } from "@oclif/command";
 
-import { readChoice } from "../functions/read-choice";
+import readChoice from "../functions/read-choice";
 
 export default class Read extends Command {
   static description = "jump into a story";

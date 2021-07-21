@@ -1,6 +1,6 @@
 import { Command, flags } from "@oclif/command";
 
-import { configureDirectory } from "../functions/configure-directory";
+import configureDirectory from "../functions/configure-directory";
 
 export default class Config extends Command {
   static description = "configure a directory for storytoy";

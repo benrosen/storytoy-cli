@@ -1,6 +1,6 @@
 import { Command, flags } from "@oclif/command";
 
-import { createChoice } from "../functions/create-choice";
+import createChoice from "../functions/create-choice";
 
 export default class Create extends Command {
   static description = "create a new choice";
