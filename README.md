@@ -8,87 +8,78 @@ Read and write interactive stories.
 [![License](https://img.shields.io/npm/l/storytoy-cli.svg)](https://github.com/benrosen/storytoy-cli/blob/master/package.json)
 
 <!-- toc -->
-
-- [Usage](#usage)
-- [Commands](#commands)
+* [storytoy-cli](#storytoy-cli)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g storytoy-cli
 $ storytoy COMMAND
 running command...
 $ storytoy (-v|--version|version)
-storytoy-cli/0.1.0 linux-x64 node-v16.3.0
+storytoy-cli/0.1.1 linux-x64 node-v16.3.0
 $ storytoy --help [COMMAND]
 USAGE
   $ storytoy COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
+* [`storytoy config [DIRECTORY]`](#storytoy-config-directory)
+* [`storytoy create [DIRECTORY]`](#storytoy-create-directory)
+* [`storytoy delete [DIRECTORY]`](#storytoy-delete-directory)
+* [`storytoy help [COMMAND]`](#storytoy-help-command)
+* [`storytoy read [DIRECTORY]`](#storytoy-read-directory)
+* [`storytoy update [DIRECTORY]`](#storytoy-update-directory)
 
-- [`storytoy config [FILE]`](#storytoy-config-file)
-- [`storytoy create [FILE]`](#storytoy-create-file)
-- [`storytoy delete [FILE]`](#storytoy-delete-file)
-- [`storytoy help [COMMAND]`](#storytoy-help-command)
-- [`storytoy read [FILE]`](#storytoy-read-file)
-- [`storytoy update [FILE]`](#storytoy-update-file)
+## `storytoy config [DIRECTORY]`
 
-## `storytoy config [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ storytoy config [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/config.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.0/src/commands/config.ts)_
-
-## `storytoy create [FILE]`
-
-describe the command here
+configure a directory for storytoy
 
 ```
 USAGE
-  $ storytoy create [FILE]
+  $ storytoy config [DIRECTORY]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help  show CLI help
 ```
 
-_See code: [src/commands/create.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.0/src/commands/create.ts)_
+_See code: [src/commands/config.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.1/src/commands/config.ts)_
 
-## `storytoy delete [FILE]`
+## `storytoy create [DIRECTORY]`
 
-describe the command here
+create a new choice
 
 ```
 USAGE
-  $ storytoy delete [FILE]
+  $ storytoy create [DIRECTORY]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help  show CLI help
 ```
 
-_See code: [src/commands/delete.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.0/src/commands/delete.ts)_
+_See code: [src/commands/create.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.1/src/commands/create.ts)_
+
+## `storytoy delete [DIRECTORY]`
+
+safely delete a choice
+
+```
+USAGE
+  $ storytoy delete [DIRECTORY]
+
+OPTIONS
+  -h, --help  show CLI help
+```
+
+_See code: [src/commands/delete.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.1/src/commands/delete.ts)_
 
 ## `storytoy help [COMMAND]`
 
@@ -107,36 +98,31 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
 
-## `storytoy read [FILE]`
+## `storytoy read [DIRECTORY]`
 
-describe the command here
-
-```
-USAGE
-  $ storytoy read [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/read.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.0/src/commands/read.ts)_
-
-## `storytoy update [FILE]`
-
-describe the command here
+jump into a story
 
 ```
 USAGE
-  $ storytoy update [FILE]
+  $ storytoy read [DIRECTORY]
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help  show CLI help
 ```
 
-_See code: [src/commands/update.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.0/src/commands/update.ts)_
+_See code: [src/commands/read.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.1/src/commands/read.ts)_
 
+## `storytoy update [DIRECTORY]`
+
+safely update a choice
+
+```
+USAGE
+  $ storytoy update [DIRECTORY]
+
+OPTIONS
+  -h, --help  show CLI help
+```
+
+_See code: [src/commands/update.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.1/src/commands/update.ts)_
 <!-- commandsstop -->
