@@ -1,7 +1,7 @@
 {
   "name": "storytoy-cli",
   "description": "Read and write interactive stories.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Ben Rosen @benrosen",
   "bin": {
     "storytoy": "./bin/run"

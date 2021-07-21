@@ -21,7 +21,7 @@ $ npm install -g storytoy-cli
 $ storytoy COMMAND
 running command...
 $ storytoy (-v|--version|version)
-storytoy-cli/0.1.1 linux-x64 node-v16.3.0
+storytoy-cli/0.1.2 linux-x64 node-v16.3.0
 $ storytoy --help [COMMAND]
 USAGE
   $ storytoy COMMAND
@@ -51,7 +51,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/config.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.1/src/commands/config.ts)_
+_See code: [src/commands/config.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.2/src/commands/config.ts)_
 
 ## `storytoy create [DIRECTORY]`
 
@@ -65,7 +65,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/create.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.1/src/commands/create.ts)_
+_See code: [src/commands/create.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.2/src/commands/create.ts)_
 
 ## `storytoy delete [DIRECTORY]`
 
@@ -79,7 +79,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/delete.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.1/src/commands/delete.ts)_
+_See code: [src/commands/delete.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.2/src/commands/delete.ts)_
 
 ## `storytoy help [COMMAND]`
 
@@ -110,7 +110,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/read.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.1/src/commands/read.ts)_
+_See code: [src/commands/read.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.2/src/commands/read.ts)_
 
 ## `storytoy update [DIRECTORY]`
 
@@ -124,5 +124,5 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/update.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.1/src/commands/update.ts)_
+_See code: [src/commands/update.ts](https://github.com/benrosen/storytoy-cli/blob/v0.1.2/src/commands/update.ts)_
 <!-- commandsstop -->
