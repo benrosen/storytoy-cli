@@ -1,8 +1,8 @@
 import { Config } from "../../types/config";
-import { Snippet } from "enquirer";
+const Enquirer = require("enquirer");
 
 export const promptForConfigValues = (): Promise<Config> => {
-  return new Snippet({
+  return new (Enquirer as any).Snippet({
     fields: [
       { name: "author", message: "Author name" },
       { name: "choices", message: "Choices glob" },
