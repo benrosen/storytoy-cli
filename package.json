@@ -59,6 +59,8 @@
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
     "@oclif/plugin-help": "^3.2.2",
+    "enquirer": "^2.3.6",
+    "path-type": "^4.0.0",
     "tslib": "^1.14.1"
   }
 }
