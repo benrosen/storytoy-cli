@@ -9,10 +9,10 @@ export default class Create extends Command {
     help: flags.help({ char: "h" }),
   };
 
-  static args = [{ name: "directory" }];
+  static args = [{ name: "id" }];
 
   async run() {
     const { args } = this.parse(Create);
-    return createChoice(args.directory);
+    return createChoice(args.id);
   }
 }
