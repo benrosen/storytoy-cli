@@ -1,6 +1,18 @@
 import { Config } from "../../types/config";
 const Enquirer = require("enquirer");
 
+/**
+ * Prompt the user for configuration values.
+ *
+ * @returns {Promise<Config>} The config values supplied by the user.
+ *
+ * @todo document errors
+ * @todo test
+ * @todo support initial values as optional inputs
+ * @todo suppport default values
+ * @todo differentiate between required and unrequired fields
+ * @todo extrapolate fields and template from Config type
+ */
 export const promptForConfigValues = (): Promise<Config> => {
   return new (Enquirer as any).Snippet({
     fields: [
@@ -14,9 +26,9 @@ export const promptForConfigValues = (): Promise<Config> => {
     required: true,
     template: `{
       "author": "\${author}",
-      "choices": "\${choices}",
+      "title": "\${title}",
       "description":"\${description}",
-      "title": \${title}""
+      "choices": "\${choices}",
     }
     `,
   })
