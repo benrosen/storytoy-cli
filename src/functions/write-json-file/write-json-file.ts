@@ -9,8 +9,8 @@ import { promises as fileSystem } from "fs";
  *
  * @returns {void}
  *
- * @todo document generic content type
- * @todo overwrite file instead of appending to file
+ * @todo {MUST} overwrite file instead of appending to file
+ * @todo {SHOULD} document generic content type
  */
 export const writeJsonFile = <T>(content: T, path: string, spaces = 2) => {
   try {

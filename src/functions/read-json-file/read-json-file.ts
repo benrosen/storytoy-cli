@@ -6,7 +6,7 @@ import { promises as fileSystem } from "fs";
  * @param {string} path The path to the JSON file.
  * @returns {any} The object parsed from the JSON file.
  *
- * @todo use generic return type instead of any
+ * @todo {SHOULD} use generic return type instead of any
  */
 export const readJsonFile = async <T>(path: string): Promise<T> => {
   try {

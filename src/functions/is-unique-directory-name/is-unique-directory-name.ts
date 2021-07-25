@@ -7,7 +7,7 @@ import listDirectoryNames from "../list-directory-names";
  * @param {string} parentDirectoryPath The directory in which to search for name conflicts
  * @returns {Promise<boolean>} Is the directory name unique?
  *
- * @todo test
+ * @todo {MUST} test
  */
 export const isUniqueDirectoryName = (
   directoryName: string,

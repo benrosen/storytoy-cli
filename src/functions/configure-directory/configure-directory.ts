@@ -8,12 +8,11 @@ import writeJsonFile from "../write-json-file";
  *
  * @param {string} directory The directory to configure for storytoy.
  *
- * @todo document errors
- * @todo test
- * @todo support flag that enables user to accept all default values and skip prompt
- * @todo create a "choices" directory using config.choices path
- * @todo support variable number of indentation spaces for config file
- * @todo include stack trace in thrown errors
+ * @todo {MUST} test
+ * @todo {MUST} create a "choices" directory using config.choices path
+ * @todo {SHOULD} include stack trace in thrown errors
+ * @todo {COULD} support flag that enables user to accept all default values and skip prompt
+ * @todo {COULD} support variable number of indentation spaces for config file
  */
 export const configureDirectory = async (directory = ".") => {
   try {
