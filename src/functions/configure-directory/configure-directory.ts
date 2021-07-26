@@ -1,4 +1,4 @@
-import { Config } from "../../types/config";
+import { IConfig } from "storytoy";
 import { ensureDir } from "fs-extra";
 import { isDirectory } from "path-type";
 import promptForConfigValues from "../prompt-for-config-values";
@@ -19,7 +19,7 @@ export const configureDirectory = async (directory = ".") => {
     if (!(await isDirectory(directory))) {
       throw new Error(`${directory} is not a directory.`);
     }
-    promptForConfigValues().then((config: Config) => {
+    promptForConfigValues().then((config: IConfig) => {
       ensureDir(path.join(directory, config.choices));
       writeJsonFile(config, `${directory}/storytoy.json`);
     });

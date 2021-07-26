@@ -1,17 +1,17 @@
-import { Config } from "../../types/config";
+import { IConfig } from "storytoy";
 const Enquirer = require("enquirer");
 
 /**
  * Prompt the user for configuration values.
  *
- * @returns {Promise<Config>} The config values supplied by the user.
+ * @returns {Promise<IConfig>} The config values supplied by the user.
  *
  * @todo {SHOULD} suppport default values
  * @todo {SHOULD} differentiate between required and unrequired fields
  * @todo {COULD} support initial values as optional inputs
- * @todo {COULD} extrapolate fields and template from Config type
+ * @todo {COULD} extrapolate fields and template from IConfig type
  */
-export const promptForConfigValues = (): Promise<Config> => {
+export const promptForConfigValues = (): Promise<IConfig> => {
   return new (Enquirer as any).Snippet({
     fields: [
       { name: "author", message: "Author name" },
@@ -31,7 +31,7 @@ export const promptForConfigValues = (): Promise<Config> => {
     `,
   })
     .run()
-    .then((response: { values: Config }) => {
+    .then((response: { values: IConfig }) => {
       return response.values;
     })
     .catch((error: Error) => {

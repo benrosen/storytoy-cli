@@ -1,4 +1,4 @@
-import { Config } from "../../types/config";
+import { IConfig } from "storytoy";
 import { extname as getExtensionName } from "path";
 import { isFile } from "path-type";
 import { readJsonFile } from "../read-json-file/read-json-file";
@@ -8,7 +8,7 @@ import { readJsonFile } from "../read-json-file/read-json-file";
  *
  * @param {string} configFilePath The path to the config file.
  */
-export const loadConfig = async (configFilePath?: string): Promise<Config> => {
+export const loadConfig = async (configFilePath?: string): Promise<IConfig> => {
   try {
     const expectedConfigFilePath = `${process.cwd()}/${
       configFilePath ?? "storytoy.json"
@@ -21,7 +21,7 @@ export const loadConfig = async (configFilePath?: string): Promise<Config> => {
     if (!(await isFile(expectedConfigFilePath))) {
       throw new Error(`${expectedConfigFilePath} is not a file.`);
     }
-    return readJsonFile<Config>(expectedConfigFilePath);
+    return readJsonFile<IConfig>(expectedConfigFilePath);
   } catch (error) {
     throw new Error(`Unable to load config; ${error.message}`);
   }
