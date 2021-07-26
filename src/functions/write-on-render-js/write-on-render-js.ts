@@ -9,13 +9,11 @@ import { promises as fileSystem } from "fs";
  * @todo {MUST} test
  */
 export const writeOnRenderJs = (directory: string) => {
-  return fileSystem.mkdir(directory).then(() => {
-    fileSystem.writeFile(
-      `${directory}/on-render.js`,
-      `export const onRender = (context) => {
+  return fileSystem.writeFile(
+    `${directory}/on-render.js`,
+    `export const onRender = (context) => {
   return \`Hello \${context?.player?.name ?? "World"}\`;
 };
 `
-    );
-  });
+  );
 };

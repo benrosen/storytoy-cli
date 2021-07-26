@@ -10,15 +10,13 @@ import { promises as fileSystem } from "fs";
  * @todo {MUST} test
  */
 export const writeChoiceDataJson = (directory: string, id: string) => {
-  return fileSystem.mkdir(directory).then(() => {
-    return fileSystem.writeFile(
-      `${directory}/choice-data.json`,
-      `{
-"axes": [],
-"id": "${id}",
-"results": []
+  return fileSystem.writeFile(
+    `${directory}/choice-data.json`,
+    `{
+  "axes": [],
+  "id": "${id}",
+  "results": []
 }
 `
-    );
-  });
+  );
 };
