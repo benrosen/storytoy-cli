@@ -1,7 +1,7 @@
 /**
- * @todo document
- * @todo import IConfig from storytoy
- * @todo explicitly implement IConfig
+ * @todo {MUST} document
+ * @todo {MUST} import IConfig from storytoy
+ * @todo {MUST} explicitly implement IConfig
  */
 export type Config = {
   author?: string;
