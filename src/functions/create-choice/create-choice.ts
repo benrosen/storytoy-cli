@@ -1,10 +1,10 @@
+import { ensureDir } from "fs-extra";
 import isUniqueDirectoryName from "../is-unique-directory-name";
 import loadConfig from "../load-config";
 import { writeChoiceDataJson } from "../write-choice-data-json/write-choice-data-json";
 import { writeIndexJs } from "../write-index-js/write-index-js";
 import writeOnRenderJs from "../write-on-render-js";
 import writeReadmeMd from "../write-readme-md";
-
 /**
  * Create a new choice.
  *
@@ -21,6 +21,7 @@ export const createChoice = (id: string) => {
         );
       }
       const newChoiceDirectoryPath = `${choicesDirectoryPath}/${id}`;
+      await ensureDir(newChoiceDirectoryPath);
       writeChoiceDataJson(newChoiceDirectoryPath, id);
       writeIndexJs(newChoiceDirectoryPath);
       writeOnRenderJs(newChoiceDirectoryPath);
