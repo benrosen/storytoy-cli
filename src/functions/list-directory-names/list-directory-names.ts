@@ -1,5 +1,7 @@
 import { Dirent, promises as fileSystem } from "fs";
 
+import { ensureDir } from "fs-extra";
+
 /**
  * List the names of the directories in the given directory.
  *
@@ -8,15 +10,7 @@ import { Dirent, promises as fileSystem } from "fs";
  */
 export const listDirectoryNames = async (path: string): Promise<string[]> => {
   try {
-    try {
-      await fileSystem.access(path);
-    } catch (error) {
-      if (error?.code === "ENOENT") {
-        return fileSystem.mkdir(path).then(() => {
-          return [];
-        });
-      }
-    }
+    await ensureDir(path);
     return fileSystem
       .readdir(path, { withFileTypes: true })
       .then((dirents: Dirent[]) => {
