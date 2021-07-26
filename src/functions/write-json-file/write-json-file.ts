@@ -9,12 +9,11 @@ import { promises as fileSystem } from "fs";
  *
  * @returns {void}
  *
- * @todo {MUST} overwrite file instead of appending to file
  * @todo {SHOULD} document generic content type
  */
 export const writeJsonFile = <T>(content: T, path: string, spaces = 2) => {
   try {
-    return fileSystem.appendFile(path, JSON.stringify(content, null, spaces));
+    return fileSystem.writeFile(path, JSON.stringify(content, null, spaces));
   } catch (error) {
     throw new Error(`Unable to write JSON file; ${error.message}`);
   }
