@@ -6,8 +6,6 @@ import { promises as fileSystem } from "fs";
  * @param {string} directory The parent directory for the new file.
  * @param {string} id The id of the new Choice.
  * @returns {Promise<void>} An empty promise.
- *
- * @todo {MUST} test
  */
 export const writeReadmeMd = (directory: string, id: string) => {
   return fileSystem.writeFile(

@@ -5,8 +5,6 @@ import { promises as fileSystem } from "fs";
  *
  * @param {string} directory The parent directory for the new file.
  * @returns {Promise<void>} An empty promise.
- *
- * @todo {MUST} test
  */
 export const writeOnRenderJs = (directory: string) => {
   return fileSystem.writeFile(

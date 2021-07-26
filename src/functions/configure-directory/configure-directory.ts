@@ -8,7 +8,6 @@ import writeJsonFile from "../write-json-file";
  *
  * @param {string} directory The directory to configure for storytoy.
  *
- * @todo {MUST} test
  * @todo {MUST} create a "choices" directory using config.choices path
  * @todo {SHOULD} include stack trace in thrown errors
  * @todo {COULD} support flag that enables user to accept all default values and skip prompt

@@ -6,7 +6,6 @@ const Enquirer = require("enquirer");
  *
  * @returns {Promise<Config>} The config values supplied by the user.
  *
- * @todo {MUST} test
  * @todo {SHOULD} suppport default values
  * @todo {SHOULD} differentiate between required and unrequired fields
  * @todo {COULD} support initial values as optional inputs
