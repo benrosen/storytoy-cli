@@ -14,10 +14,10 @@ export default class Read extends Command {
     help: flags.help({ char: "h" }),
   };
 
-  static args = [{ name: "directory" }];
+  static args = [{ name: "id" }];
 
   async run() {
     const { args } = this.parse(Read);
-    return readChoice(args.directory);
+    return readChoice(args.id);
   }
 }
