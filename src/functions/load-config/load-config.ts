@@ -23,6 +23,6 @@ export const loadConfig = async (configFilePath?: string): Promise<IConfig> => {
     }
     return readJsonFile<IConfig>(expectedConfigFilePath);
   } catch (error) {
-    throw new Error(`Unable to load config; ${error.message}`);
+    throw new Error(`Unable to load config; ${error}`);
   }
 };

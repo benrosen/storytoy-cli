@@ -24,8 +24,6 @@ export const configureDirectory = async (directory = ".") => {
       writeJsonFile(config, `${directory}/storytoy.json`);
     });
   } catch (error) {
-    throw new Error(
-      `Unable to configure ${directory} for storytoy; ${error.message}`
-    );
+    throw new Error(`Unable to configure ${directory} for storytoy; ${error}`);
   }
 };

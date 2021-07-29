@@ -23,6 +23,6 @@ export const listDirectoryNames = async (path: string): Promise<string[]> => {
           });
       });
   } catch (error) {
-    throw new Error(`Unable to list directory names; ${error.message}`);
+    throw new Error(`Unable to list directory names; ${error}`);
   }
 };

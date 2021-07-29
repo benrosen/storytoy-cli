@@ -12,6 +12,6 @@ export const readJsonFile = async <T>(path: string): Promise<T> => {
   try {
     return JSON.parse(await fileSystem.readFile(path, "utf8")) as T;
   } catch (error) {
-    throw new Error(`Unable to read ${path}; ${error.message}`);
+    throw new Error(`Unable to read ${path}; ${error}`);
   }
 };

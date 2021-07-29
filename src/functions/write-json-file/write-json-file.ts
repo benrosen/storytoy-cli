@@ -15,6 +15,6 @@ export const writeJsonFile = <T>(content: T, path: string, spaces = 2) => {
   try {
     return fileSystem.writeFile(path, JSON.stringify(content, null, spaces));
   } catch (error) {
-    throw new Error(`Unable to write JSON file; ${error.message}`);
+    throw new Error(`Unable to write JSON file; ${error}`);
   }
 };

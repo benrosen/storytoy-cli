@@ -1,5 +1,5 @@
 import { IConfig } from "storytoy";
-const Enquirer = require("enquirer");
+import Enquirer = require("enquirer");
 
 /**
  * Prompt the user for configuration values.
@@ -35,6 +35,6 @@ export const promptForConfigValues = (): Promise<IConfig> => {
       return response.values;
     })
     .catch((error: Error) => {
-      throw new Error(`Unable to return config values; ${error.message}`);
+      throw new Error(`Unable to return config values; ${error}`);
     });
 };
