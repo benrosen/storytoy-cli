@@ -9,13 +9,13 @@ import { promises as fileSystem } from "fs";
 export const writeIndexJs = (directory: string) => {
   return fileSystem.writeFile(
     `${directory}/index.js`,
-    `import data from "./choice-data.json"
-import { onRender } from "./on-render.js"
+    `const data = require("./choice-data.json");
+const onRender = require("./on-render");
 
-export default {
+exports.choice = {
   ...data,
-  onRender
-}
+  onRender: onRender.onRender,
+};
 `
   );
 };
