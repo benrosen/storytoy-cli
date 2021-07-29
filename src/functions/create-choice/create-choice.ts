@@ -4,6 +4,7 @@ import loadConfig from "../load-config";
 import { writeChoiceDataJson } from "../write-choice-data-json/write-choice-data-json";
 import { writeIndexJs } from "../write-index-js/write-index-js";
 import writeOnRenderJs from "../write-on-render-js";
+import writePackageJson from "../write-package-json";
 import writeReadmeMd from "../write-readme-md";
 /**
  * Create a new choice.
@@ -25,9 +26,10 @@ export const createChoice = (id: string) => {
       writeChoiceDataJson(newChoiceDirectoryPath, id);
       writeIndexJs(newChoiceDirectoryPath);
       writeOnRenderJs(newChoiceDirectoryPath);
+      writePackageJson(newChoiceDirectoryPath, id);
       writeReadmeMd(newChoiceDirectoryPath, id);
     })
     .catch((error) => {
-      throw new Error(`Unable to create choice; ${error.message}`);
+      throw new Error(`Unable to create choice; ${error}`);
     });
 };
